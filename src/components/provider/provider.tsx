@@ -12,6 +12,14 @@ type Props = {
 // Initialize axios instance
 new AxiosHelper(CONFIG.API_URL as string);
 
+// Initialize Poppins font
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
+});
+
 const Provider: FC<Props> = ({ children }) => {
   const [queryClient] = useState(
     () =>
@@ -30,13 +38,6 @@ const Provider: FC<Props> = ({ children }) => {
         },
       })
   );
-
-  const poppins = Poppins({
-    weight: ["400", "500", "600", "700"],
-    style: ["normal"],
-    subsets: ["latin"],
-    variable: "--font-poppins",
-  });
 
   return (
     <main className={`${poppins.variable} font-poppins`}>
