@@ -1,6 +1,7 @@
 {
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
   "css.validate": false,
   "[typescriptreact]": {
     "editor.formatOnSave": true,

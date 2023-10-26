@@ -4,15 +4,27 @@ import type { AppProps } from "next/app";
 import { appWithTranslation } from "next-i18next";
 import nextI18NextConfig from "../../next-i18next.config.js";
 import dayjs from "dayjs";
-import Provider from "@/components/provider/provider";
+import { useRouter } from "next/router";
+import { AnimatePresence } from "framer-motion";
+import { handleScrollTop } from "@/utils/helpers/window.helper";
+import Provider from "@/components/provider";
 require("dayjs/locale/tr");
 dayjs.locale("tr");
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
+  const router = useRouter();
+  const pageKey = router.asPath;
+
   return (
     // App Provider
     <Provider>
-      <Component {...pageProps} />
+      <AnimatePresence
+        initial={false}
+        onExitComplete={handleScrollTop}
+        mode="popLayout"
+      >
+        <Component key={pageKey} {...pageProps} />
+      </AnimatePresence>
     </Provider>
   );
 };
