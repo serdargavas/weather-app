@@ -1,0 +1,61 @@
+{
+  "extends": "next/core-web-vitals",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "react/self-closing-comp": "off",
+    "no-new": "off",
+    "no-empty": "warn",
+    "no-extra-boolean-cast": "off",
+    "prefer-promise-reject-errors": "off",
+    "prettier/prettier": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "import/order": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "react/jsx-key": "off",
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
+    "no-trailing-spaces": "error",
+    "no-tabs": ["error", { "allowIndentationTabs": true }],
+    "no-unused-vars": "off",
+    "object-shorthand": ["error", "always"],
+    "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }],
+    "arrow-spacing": "error",
+    "block-spacing": "error",
+    "key-spacing": ["error", { "afterColon": true }],
+    "func-call-spacing": ["error", "never"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "space-in-parens": ["error", "never"],
+    "@typescript-eslint/type-annotation-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true,
+        "overrides": {
+          "arrow": { "before": true, "after": true }
+        }
+      }
+    ],
+    // "max-len": ["error", { "code": 80 }],
+    "padded-blocks": ["error", "never"],
+    "lines-between-class-members": [
+      "error",
+      "always",
+      { "exceptAfterSingleLine": true }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-console": ["error", { "allow": ["warn", "error", "info"] }],
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  },
+  "ignorePatterns": ["src/**/*.test.ts", "babel.config.js", "node-modules/*"]
+}
