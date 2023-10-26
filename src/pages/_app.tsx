@@ -4,7 +4,6 @@ import type { AppProps } from "next/app";
 import { appWithTranslation } from "next-i18next";
 import nextI18NextConfig from "../../next-i18next.config.js";
 import dayjs from "dayjs";
-import { CONFIG } from "@/utils/constants/config";
 import Provider from "@/components/provider/provider";
 require("dayjs/locale/tr");
 dayjs.locale("tr");
