@@ -10,6 +10,7 @@ dayjs.locale("tr");
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
+    // App Provider
     <Provider>
       <Component {...pageProps} />
     </Provider>

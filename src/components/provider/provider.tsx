@@ -3,6 +3,7 @@ import { CONFIG } from "@/utils/constants/config";
 import AxiosHelper from "@/utils/helpers/axios.helper";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React, { FC, ReactNode, useState } from "react";
+import { Poppins } from "next/font/google";
 
 type Props = {
   children?: ReactNode;
@@ -30,8 +31,17 @@ const Provider: FC<Props> = ({ children }) => {
       })
   );
 
+  const poppins = Poppins({
+    weight: ["400", "500", "600", "700"],
+    style: ["normal"],
+    subsets: ["latin"],
+    variable: "--font-poppins",
+  });
+
   return (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    <main className={`${poppins.variable} font-poppins`}>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    </main>
   );
 };
 
