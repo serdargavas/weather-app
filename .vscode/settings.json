@@ -1,0 +1,29 @@
+{
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "css.validate": false,
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.exclude": {
+    // "**/node_modules": true,
+    // ".husky": true,
+    // "**/tsconfig.json": true,
+    // "**/.eslintrc.js": true,
+    // "**/next-env.d.ts": true,
+    // "**/.next": true,
+    // "**/postcss.config.js": true,
+    // "**/tailwind.config.js": true,
+    // "**/next-i18next.config.js": true,
+    // "packages/tsconfig": true,
+    // "packages/eslint-config-custom": true,
+    // "packages/tailwind-config": true
+  },
+  "workspace.isHidden": true
+}
