@@ -115,11 +115,7 @@ const WeatherInfoModal: FC<Props> = ({ selectedCity, onCityChange }) => {
                       )}
                     {data &&
                       weatherItem(
-<<<<<<< HEAD
                         t("maxTemperature"),
-=======
-                        t("minTemperature"),
->>>>>>> dd098894109bb5e5de81b9f0c6245fcf767f8ea0
                         `${data?.main.temp_max}°`
                       )}
                     {data &&
