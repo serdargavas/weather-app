@@ -17,6 +17,9 @@ dependencies:
   framer-motion:
     specifier: ^10.16.4
     version: 10.16.4(react-dom@18.2.0)(react@18.2.0)
+  husky:
+    specifier: ^8.0.3
+    version: 8.0.3
   i18next:
     specifier: ^23.6.0
     version: 23.6.0
@@ -67,9 +70,6 @@ devDependencies:
   eslint-config-next:
     specifier: 14.0.0
     version: 14.0.0(eslint@8.52.0)(typescript@5.2.2)
-  husky:
-    specifier: ^8.0.3
-    version: 8.0.3
   postcss:
     specifier: ^8
     version: 8.4.31
@@ -1768,7 +1768,7 @@ packages:
     resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
     engines: {node: '>=14'}
     hasBin: true
-    dev: true
+    dev: false
 
   /i18next-fs-backend@2.2.0:
     resolution: {integrity: sha512-VOPHhdDX0M/csRqEw+9Ectpf6wvTIg1MZDfAHxc3JKnAlJz7fcZSAKAeyDohOq0xuLx57esYpJopIvBaRb0Bag==}
