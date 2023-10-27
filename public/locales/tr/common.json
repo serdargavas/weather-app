@@ -1,1 +1,12 @@
-{}
+{
+  "weatherApp": "Hava Durumu Uygulaması",
+  "expand": "Genişlet",
+  "collapse": "Küçült",
+  "felt": "Hissedilen",
+  "temperature": "Sıcaklık",
+  "minTemperature": "Minimum Sıcaklık",
+  "maxTemperature": "Maksimum Sıcaklık",
+  "windSpeed": "Rüzgar Hızı",
+  "sunrise": "Güneşin Doğuşu",
+  "sunset": "Güneşin Batışı"
+}
