@@ -83,10 +83,10 @@ const TurkeyMap: FC<Props> = ({
                 onMouseLeave={() => onCityHover(undefined)}
                 fill={
                   selectedCity?.name === c.name
-                    ? "#3066BE"
+                    ? "#6cefc7"
                     : hoveredCity?.name === c.name
-                    ? "#c3cddc"
-                    : "#E3E8EF"
+                    ? "#B3FFE8"
+                    : "#E6E6E6"
                 }
                 d={c.path}
               />
@@ -102,11 +102,8 @@ const TurkeyMap: FC<Props> = ({
                 key={c.name}
                 style={{ left: svgPositions[idx].x, top: svgPositions[idx].y }}
                 onClick={() => onCityChange(c)}
-                className={`absolute text-center text-[10px] z-[1] cursor-pointer pointer-events-none ${
-                  selectedCity?.id === c.id
-                    ? "text-slate-300"
-                    : "text-slate-950"
-                }`}
+                className={`hidden md:block absolute text-center md:text-[8px] lg:text-[10px] z-[1] cursor-pointer pointer-events-none 
+                   text-slate-950`}
               >
                 {c.name}
               </div>

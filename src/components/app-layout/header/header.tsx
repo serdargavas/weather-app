@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon } from "@/assets";
+import { socialItems } from "@/utils/helpers/social-contact.helper";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,13 +7,8 @@ import React, { FC } from "react";
 const Header: FC = () => {
   const { t } = useTranslation();
 
-  const socialItems = [
-    { image: LinkedinIcon, url: "https://www.linkedin.com/in/serdar-gavas/" },
-    { image: GithubIcon, url: "https://github.com/serdargavas" },
-  ];
-
   return (
-    <header className="h-12 bg-slate-200 flex flex-row flex-wrap justify-between items-center px-8">
+    <header className="h-14 md:h-12 bg-slate-200 flex flex-col md:flex-row flex-wrap justify-center md:justify-between items-center px-2 md:px-4 lg:px-8 gap-y-3">
       <div className="text-slate-950">{t("weatherApp")}</div>
       <div className="flex flex-row justify-center items-center gap-x-7">
         <div>Serdar Gavas</div>

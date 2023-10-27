@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { FC, HTMLAttributes, ReactNode } from "react";
 import { useTranslation } from "next-i18next";
 import { SlArrowUp } from "react-icons/sl";
+import Loader from "../loader";
 
 export enum ModalPosition {
   Left = "left",
@@ -13,12 +14,14 @@ type Props = {
   onVisibilityChange: (visible: boolean) => void;
   collapsedItem?: ReactNode;
   expandedItem?: ReactNode;
+  loader: boolean;
   position?: ModalPosition;
 } & HTMLAttributes<HTMLDivElement>;
 
 const Modal: FC<Props> = ({
   visible,
   onVisibilityChange,
+  loader,
   collapsedItem,
   expandedItem,
   position = ModalPosition.Right,
@@ -30,12 +33,14 @@ const Modal: FC<Props> = ({
     <>
       {collapsedItem && (
         <div
-          className={`absolute px-6 py-6 bg-slate-100 shadow-lg rounded-[16px] bottom-5 z-[1] cursor-pointer ${
-            position === ModalPosition.Left ? "left-5" : "right-5"
+          className={`absolute w-full md:w-auto px-6 py-6 bg-slate-100 shadow-lg rounded-[16px] bottom-0 md:bottom-5 z-[1] cursor-pointer ${
+            position === ModalPosition.Left
+              ? "left-0 right-0 md:right-[unset] md:left-5"
+              : "left-0 right-0 md:left-[unset] md:right-5"
           }`}
         >
           <div {...props}>
-            <div className="flex flex-col items-center gap-x-7 cursor-pointer">
+            <div className="flex flex-col items-center gap-x-7 flex-wrap cursor-pointer">
               <div
                 className="flex w-full flex-row flex-wrap justify-between items-center gap-x-7 cursor-pointer"
                 onClick={() => onVisibilityChange(!visible)}
@@ -77,9 +82,9 @@ const Modal: FC<Props> = ({
                       stiffness: 150,
                       mass: 1.5,
                     }}
-                    className="overflow-hidden"
+                    className="overflow-hidden !w-full"
                   >
-                    <div className="w-[300px] h-[300px] border-t-[1px] border-slate-300 mt-4 pt-4">
+                    <div className="w-full h-[250px] md:w-[350px] md:h-[250px] lg:w-[400px] lg:h-[450px] md:border-t-[1px] border-slate-300 mt-4 pt-4 flex flex-col justify-center">
                       {expandedItem}
                     </div>
                   </motion.div>
@@ -87,6 +92,7 @@ const Modal: FC<Props> = ({
               </AnimatePresence>
             </div>
           </div>
+          <Loader isLoading={loader} />
         </div>
       )}
     </>

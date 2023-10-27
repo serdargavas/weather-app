@@ -17,7 +17,7 @@ export default class AxiosHelper {
         if (response.config.responseType === "blob") {
           return response.data;
         }
-        return response.data.data;
+        return response.data;
       },
       (error) => {
         throw getError(error);
