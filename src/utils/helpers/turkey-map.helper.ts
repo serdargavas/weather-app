@@ -1,4 +1,11 @@
-export const cities = [
+export interface City {
+  id: string;
+  plateNumber: number;
+  name: string;
+  path: string;
+}
+
+export const cities: City[] = [
   {
     id: "bursa",
     plateNumber: 16,

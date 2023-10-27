@@ -6,4 +6,5 @@ module.exports = {
     locales: ["tr"],
     localeDetection: false,
   },
+  localePath: require("path").resolve("./public/locales"),
 };

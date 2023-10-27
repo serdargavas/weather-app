@@ -1,1 +1,6 @@
-{}
+{
+  "weatherApp": "Hava Durumu Uygulaması",
+  "expand": "Genişlet",
+  "collapse": "Küçült",
+  "felt": "Hissedilen"
+}

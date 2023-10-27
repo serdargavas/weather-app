@@ -12,18 +12,18 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.exclude": {
-    "**/node_modules": true,
-    ".husky": true,
-    "**/tsconfig.json": true,
-    "**/.eslintrc.js": true,
-    "**/next-env.d.ts": true,
-    "**/.next": true,
-    "**/postcss.config.js": true,
-    "**/tailwind.config.js": true,
-    "**/next-i18next.config.js": true,
-    "packages/tsconfig": true,
-    "packages/eslint-config-custom": true,
-    "packages/tailwind-config": true
+    // "**/node_modules": true,
+    // ".husky": true,
+    // "**/tsconfig.json": true,
+    // "**/.eslintrc.js": true,
+    // "**/next-env.d.ts": true,
+    // "**/.next": true,
+    // "**/postcss.config.js": true,
+    // "**/tailwind.config.js": true,
+    // "**/next-i18next.config.js": true,
+    // "packages/tsconfig": true,
+    // "packages/eslint-config-custom": true,
+    // "packages/tailwind-config": true
   },
   "workspace.isHidden": true
 }

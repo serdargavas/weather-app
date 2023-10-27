@@ -41,6 +41,16 @@ const config: Config = {
         15: "96px",
         16: "120px",
       },
+      // Colors
+      colors: {
+        primary: {
+          500: "#3066BE",
+          400: "#6D9DC5",
+          300: "#119DA4",
+          200: "#80DED9",
+          100: "#AEECEF",
+        },
+      },
     },
   },
   plugins: [],
